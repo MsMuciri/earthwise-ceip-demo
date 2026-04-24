@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CEIP — Circular Economy Intelligence Platform | Earthwise Insights</title>
+<title>Earthwise Insights — Circular Economy Intelligence for East Africa</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,600;1,300;1,600&family=Noto+Sans:wght@300;400;500;600&family=Noto+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"/>
 <style>
@@ -245,6 +245,43 @@ footer{border-top:1px solid var(--b);padding:1.25rem 2.5rem;display:flex;justify
   #map-sidebar{height:auto!important;min-height:200px}
   #map-grid{grid-template-columns:1fr!important}
 }
+
+/* HERO SUB */
+.hero-sub{font-family:var(--sr);font-size:clamp(1rem,2vw,1.25rem);font-weight:300;color:var(--sg);margin-bottom:.875rem;font-style:italic}
+.stat-verified{font-size:11px;color:var(--t3);letter-spacing:.07em;margin-top:1.25rem;text-align:center}
+
+/* BSF FEATURED CARD */
+.bsf-featured{background:linear-gradient(135deg,rgba(201,151,58,.12) 0%,rgba(201,151,58,.05) 100%);border:1.5px solid var(--am);border-radius:10px;padding:2rem 2.5rem;display:grid;grid-template-columns:1fr auto;gap:2.5rem;align-items:center;margin-bottom:2rem}
+.bsf-featured-eyebrow{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--am);margin-bottom:.625rem}
+.bsf-featured-headline{font-family:var(--sr);font-size:clamp(1.1rem,2.2vw,1.5rem);font-weight:600;color:var(--am2);line-height:1.3;margin-bottom:.875rem}
+.bsf-featured-body{font-size:13px;color:var(--t2);line-height:1.75;max-width:540px;margin-bottom:1.25rem}
+.bsf-featured-cta{display:inline-block;padding:.625rem 1.5rem;background:var(--am);color:var(--fd);border-radius:var(--r);font-size:13px;font-weight:600;text-decoration:none;letter-spacing:.04em;transition:background .2s}
+.bsf-featured-cta:hover{background:var(--am2)}
+.bsf-featured-right{text-align:center;flex-shrink:0;padding:1.5rem;background:rgba(201,151,58,.08);border:1px solid rgba(201,151,58,.2);border-radius:8px;min-width:160px}
+.bsf-featured-num{font-family:var(--sr);font-size:3.5rem;font-weight:600;color:var(--am2);line-height:1}
+.bsf-featured-unit{font-size:11px;color:var(--am);letter-spacing:.07em;text-transform:uppercase;margin-top:.25rem}
+.bsf-featured-unit2{font-size:11px;color:var(--t3);line-height:1.5;margin-top:.5rem}
+.bsf-featured-badge{margin-top:1rem;padding:.375rem .75rem;background:rgba(74,222,128,.08);border:1px solid rgba(74,222,128,.2);border-radius:var(--r);font-size:10px;color:#4ade80;letter-spacing:.06em;text-align:center;line-height:1.5}
+@media(max-width:640px){.bsf-featured{grid-template-columns:1fr;gap:1.25rem}.bsf-featured-right{text-align:left}}
+
+/* SECTION INTRO */
+.sec-intro{margin-bottom:1.5rem}
+
+/* BRIEF REDESIGN */
+.brief-main{background:var(--fm);border:1px solid var(--b);border-radius:8px;padding:2.5rem;margin-bottom:1.5rem}
+.brief-main-eyebrow{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--sg);margin-bottom:.625rem}
+.brief-main-title{font-family:var(--sr);font-size:1.5rem;font-weight:400;color:var(--mn);margin-bottom:.75rem}
+.brief-main-body{font-size:14px;color:var(--t2);max-width:500px;line-height:1.75;margin-bottom:1.5rem}
+.brief-process{display:flex;gap:1.5rem;flex-wrap:wrap;margin-top:1.75rem;padding-top:1.75rem;border-top:1px solid var(--b)}
+.brief-step{display:flex;align-items:flex-start;gap:.875rem;flex:1;min-width:160px}
+.brief-step-num{font-family:var(--sr);font-size:1.25rem;color:var(--sg);font-weight:600;flex-shrink:0;line-height:1;margin-top:2px}
+.brief-step-text{font-size:12px;color:var(--t2);line-height:1.6}
+.brief-cta-block{text-align:center;padding:2rem;background:rgba(135,195,143,.04);border:1px solid var(--b);border-radius:8px;margin-bottom:1.5rem}
+.brief-cta-title{font-family:var(--sr);font-size:1.125rem;color:var(--mn);margin-bottom:.5rem}
+.brief-cta-sub{font-size:13px;color:var(--t2);margin-bottom:1.25rem}
+.brief-cta-email{font-size:1rem;color:var(--sg);text-decoration:none;font-weight:500;letter-spacing:.02em}
+.brief-cta-email:hover{color:var(--sgl)}
+.brief-cta-note{font-size:11px;color:var(--t3);margin-top:.625rem}
 </style>
 </head>
 <body>
@@ -270,7 +307,7 @@ footer{border-top:1px solid var(--b);padding:1.25rem 2.5rem;display:flex;justify
     <button class="nav-link" onclick="showSection('businesses')">Businesses</button>
     <button class="nav-link" onclick="showSection('compare')">Compare</button>
     <button class="nav-link" onclick="showSection('fieldmap')">Field map</button>
-    <button class="nav-cta" onclick="showSection('brief')">Request a brief</button>
+    <button class="nav-cta" onclick="showSection('brief')">Start a conversation</button>
   </div>
 </nav>
 
@@ -279,20 +316,41 @@ footer{border-top:1px solid var(--b);padding:1.25rem 2.5rem;display:flex;justify
   <button class="snav-btn active" id="snav-businesses" onclick="showSection('businesses')">Mapped businesses</button>
   <button class="snav-btn" id="snav-compare" onclick="showSection('compare')">Compare</button>
   <button class="snav-btn" id="snav-fieldmap" onclick="showSection('fieldmap')">Field map</button>
-  <button class="snav-btn" id="snav-brief" onclick="showSection('brief')">Investment briefs</button>
+  <button class="snav-btn" id="snav-brief" onclick="showSection('brief')">Investment intelligence</button>
 </div>
 
 <!-- ===== BUSINESSES ===== -->
 <div class="page-section active" id="sec-businesses">
   <div class="hero">
-    <div class="hero-eyebrow">Nairobi, Kenya · Circular Economy · 2026</div>
-    <h1 class="hero-title">Circular economy capital is<br><em>flying blind</em> without this data</h1>
-    <p class="hero-body">Our Platform structures invisible circular economic activity into investable intelligence. Two end-to-end circular businesses. Real numbers. Field-verified. Operator-consented.</p>
+    <div class="hero-eyebrow">Nairobi, Kenya · Circular Economy Intelligence · 2026</div>
+    <h1 class="hero-title">There is no standardised data infrastructure for circular economy investment in East Africa.</h1>
+    <p class="hero-sub">Earthwise Insights is building it. Here is what we have found.</p>
+    <p class="hero-body">Capital is deploying into Africa's circular economy without verified, comparable data. Earthwise structures that activity; real operators, real waste flows, real revenue, into intelligence that capital can actually use.</p>
     <div class="stat-row">
-      <div class="stat"><div class="stat-num">2</div><div class="stat-label">End-to-end businesses</div></div>
+      <div class="stat"><div class="stat-num">2</div><div class="stat-label">Field-verified businesses</div></div>
       <div class="stat"><div class="stat-num">11</div><div class="stat-label">Sites mapped</div></div>
       <div class="stat"><div class="stat-num">466 t</div><div class="stat-label">Waste diverted / yr</div></div>
-      <div class="stat"><div class="stat-num">KES 8.2M</div><div class="stat-label">Combined revenue</div></div>
+      <div class="stat"><div class="stat-num">KES 8.2M</div><div class="stat-label">Documented revenue</div></div>
+    </div>
+    <div class="stat-verified">100% field-verified · Operator-consented · Africa-calibrated</div>
+  </div>
+
+  <!-- BSF OPPORTUNITY CARD -->
+  <div class="wrap" style="padding-bottom:0;margin-bottom:0">
+    <div class="bsf-featured">
+      <div class="bsf-featured-left">
+        <div class="bsf-featured-eyebrow">Featured Opportunity · Organic Waste Processing · Nairobi</div>
+        <div class="bsf-featured-headline">1,200 tonnes of organic waste.<br>Collected. Licensed. Unprocessed.</div>
+        <div class="bsf-featured-body">A fully licensed waste management operator, NEMA and Nairobi City County certified, currently aggregates and supplies organic waste to one of Kenya's established BSF processors. That processor cannot absorb the full volume. The gap is 1,200 tonnes per year of already-collected, already-aggregated organic feedstock with no supply chain to build. Nairobi grows at approximately 4% annually. Organic waste generation is accelerating faster than processing capacity. The gap is widening. This is a live supply-demand mismatch, not a projected opportunity. What is missing is processing capacity, not supply.</div>
+        <a href="mailto:njeri@earthwiseinsights.com?subject=BSF%20Opportunity%20%E2%80%94%20Investor%20Interest" class="bsf-featured-cta">Join the BSF investor waitlist →</a>
+        <div style="font-size:11px;color:var(--t3);margin-top:.625rem">We'll reach out to discuss the opportunity directly.</div>
+      </div>
+      <div class="bsf-featured-right">
+        <div class="bsf-featured-num">1,200</div>
+        <div class="bsf-featured-unit">tonnes / yr</div>
+        <div class="bsf-featured-unit2">unprocessed organic<br>feedstock available today</div>
+        <div class="bsf-featured-badge">No supply chain<br>build required</div>
+      </div>
     </div>
   </div>
 
@@ -511,21 +569,6 @@ footer{border-top:1px solid var(--b);padding:1.25rem 2.5rem;display:flex;justify
       </div>
     </div>
 
-    <!-- BSF CALLOUT -->
-    <div class="bsf">
-      <div class="bsf-icon">
-        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3C8 3 5 7 5 10c0 5 5 9 7 11 2-2 7-6 7-11 0-3-3-7-7-7z"/><path d="M12 7v4M10 9h4"/></svg>
-      </div>
-      <div>
-        <div class="bsf-eyebrow">Unmet processing gap · BSF investment opportunity</div>
-        <div class="bsf-title">1,200 tonnes of organic waste collected annually — none converted</div>
-        <div class="bsf-body">KE-MRF-001 collects organic waste it cannot process. This is a verified BSF feedstock opportunity inside an already-operational certified business. No supply chain development required — the volume exists and is being collected today.</div>
-      </div>
-      <div class="bsf-num">
-        <div class="bsf-num-val">1,200</div>
-        <div class="bsf-num-unit">tonnes / yr<br>unprocessed</div>
-      </div>
-    </div>
 
     <!-- METHOD -->
     <div class="method-strip" style="padding:2rem 0 0;border-top:1px solid var(--b);margin:0">
@@ -541,9 +584,9 @@ footer{border-top:1px solid var(--b);padding:1.25rem 2.5rem;display:flex;justify
 <div class="page-section" id="sec-compare">
   <div style="padding:3rem 0 1.5rem">
     <div class="compare-wrap">
-      <div class="sec-eyebrow">Side by side · East Africa · 2025</div>
-      <div class="sec-title">Business comparison</div>
-      <div class="sec-body">Two certified circular businesses, same city, fundamentally different profiles. This is what structured, comparable circular economy intelligence looks like.</div>
+      <div class="sec-eyebrow">Intelligence Layer · Side-by-Side Analysis</div>
+      <div class="sec-title">What investors cannot see anywhere else.</div>
+      <div class="sec-body">These two businesses operate in the same city, serve overlapping waste streams, and would never appear in the same dataset without Earthwise. The comparison reveals what aggregate market reports cannot — margin differences, revenue-per-tonne anomalies, grant dependency, and operational efficiency gaps that determine investability.</div>
       <div class="compare-table">
         <div class="ct-header">
           <div class="ct-h label">Metric</div>
@@ -571,9 +614,9 @@ footer{border-top:1px solid var(--b);padding:1.25rem 2.5rem;display:flex;justify
 <div class="page-section" id="sec-fieldmap">
   <div style="padding:2.5rem 0 1.5rem">
     <div class="fieldmap-wrap">
-      <div class="sec-eyebrow">Ground truth · Nairobi, Kenya · August 2025</div>
-      <div class="sec-title">Field map</div>
-      <div class="sec-body">11 sites from KoboToolbox field survey, exact GPS coordinates. Select any site from the list to see intelligence and zoom the map to its location.</div>
+      <div class="sec-eyebrow">Ground Truth · Nairobi Field Survey · August 2025</div>
+      <div class="sec-title">Verified on the ground. Not modelled from a desk.</div>
+      <div class="sec-body">Every data point on this map is physically verified, GPS-tagged via KoboToolbox, and operator-consented. Two certified end-to-end businesses. Six buyback centres. Three waste hotspots. This is the supply chain behind the opportunity.</div>
 
       <div style="display:grid;grid-template-columns:280px 1fr;gap:1rem;margin-top:1.5rem;align-items:start" id="map-grid">
 
@@ -614,27 +657,44 @@ footer{border-top:1px solid var(--b);padding:1.25rem 2.5rem;display:flex;justify
 <div class="page-section" id="sec-brief">
   <div style="padding:3rem 0">
     <div class="brief-wrap">
-      <div class="brief-box">
-        <div class="brief-eyebrow">Earthwise Intelligence Service</div>
-        <h2 class="brief-title">Request a full investment brief</h2>
-        <p class="brief-body">The platform shows the public intelligence layer. The Earthwise brief goes deeper; operator identity, detailed financial modelling, waste projections, risk assessment, BSF feasibility, and direct introductions facilitated by Earthwise Insights.</p>
-        <a href="mailto:njeri@earthwiseinsights.com" class="brief-btn">Request a brief</a>
-        <div class="brief-note">For serious investors only. Initial conversation is free.</div>
+
+      <div class="brief-main">
+        <div class="brief-main-eyebrow">Earthwise Intelligence Service</div>
+        <h2 class="brief-main-title">The public layer is the beginning.</h2>
+        <p class="brief-main-body">The platform shows you the structure. The brief goes deeper — full operator identity and direct contacts, detailed financial modelling and waste projections, BSF feasibility analysis, risk and ESG assessment, and a direct introduction to the operator facilitated by Earthwise. This is for capital partners who are serious about circular economy deployment in East Africa. The initial conversation is free.</p>
+        <div class="brief-where" style="background:rgba(135,195,143,.05);border:1px solid var(--b);border-radius:6px;padding:1.125rem 1.375rem;margin-bottom:1.25rem">
+          <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--t3);margin-bottom:.5rem">Where Earthwise sits</div>
+          <div style="font-size:13px;color:var(--t2);line-height:1.7">Earthwise structures the intelligence that connects circular economy operators to capital. We are not the operator — we are the infrastructure that makes operators investable.</div>
+        </div>
+        <div class="brief-cards">
+          <div class="brief-card">
+            <div class="brief-card-title">What you unlock</div>
+            <div class="brief-card-body">• Full operator identity and contacts<br>• Investor-grade financial model and projections<br>• Verified waste supply chain documentation<br>• BSF feasibility and entry strategy<br>• Risk and ESG scoring<br>• Earthwise-facilitated operator introduction</div>
+          </div>
+          <div class="brief-card">
+            <div class="brief-card-title">Who this is for</div>
+            <div class="brief-card-body">• Impact investors deploying capital in Africa<br>• Climate funds and development finance institutions<br>• BSF and organic waste infrastructure investors<br>• Family offices with ESG mandates<br>• Corporate sustainability teams</div>
+          </div>
+          <div class="brief-card">
+            <div class="brief-card-title">The Earthwise difference</div>
+            <div class="brief-card-body">• Field-verified, not desk research<br>• Operator-consented, not extracted<br>• Built inside informal markets, not observed from outside<br>• Structured for investment, not storytelling</div>
+          </div>
+        </div>
+        <div class="brief-process">
+          <div class="brief-step"><div class="brief-step-num">01</div><div class="brief-step-text"><strong style="color:var(--mn)">Start a conversation</strong><br>Email Njeri directly. BSF opportunity, dataset access, or methodology — one conversation covers all of it.</div></div>
+          <div class="brief-step"><div class="brief-step-num">02</div><div class="brief-step-text"><strong style="color:var(--mn)">Intro call</strong><br>Free. Understand the opportunity and the methodology.</div></div>
+          <div class="brief-step"><div class="brief-step-num">03</div><div class="brief-step-text"><strong style="color:var(--mn)">Receive intelligence</strong><br>Full operator brief, financials, and risk assessment.</div></div>
+          <div class="brief-step"><div class="brief-step-num">04</div><div class="brief-step-text"><strong style="color:var(--mn)">Direct introduction</strong><br>Earthwise facilitates the operator conversation.</div></div>
+        </div>
       </div>
-      <div class="brief-cards">
-        <div class="brief-card">
-          <div class="brief-card-title">What you get</div>
-          <div class="brief-card-body">• Full operator identity and contacts.<br>• Detailed financial model and projections.<br>• Waste flow verification.<br>• Platform scoring methodology.<br>• Risk and ESG assessment.<br>• Investor/Operator introduction by Earthwise Insights.</div>
-        </div>
-        <div class="brief-card">
-          <div class="brief-card-title">Who this is for</div>
-          <div class="brief-card-body">• Impact investors in Africa.<br>• Climate funds<br>• Development finance institutions.<br>• Family offices with ESG priorities.<br>• BSF infrastructure investors<br>• Plastic Recycling infrastructure investors<br>• Corporate sustainability teams.</div>
-        </div>
-        <div class="brief-card">
-          <div class="brief-card-title">The Earthwise difference</div>
-          <div class="brief-card-body">• Field-verified,not desk research.<br>• Operator-consented,not extracted.<br>• Africa calibrated.<br>• 17+ combined years of field access in formal and informal systems.<br>• Real operators,real numbers.<br>• Real circular economy intelligence.</div>
-        </div>
+
+      <div class="brief-cta-block">
+        <div class="brief-cta-title">Start a conversation with Njeri</div>
+        <div class="brief-cta-sub">For serious capital partners. Whether you are exploring the BSF opportunity, the broader dataset, or the intelligence methodology, the initial conversation is free.</div>
+        <a href="mailto:njeri@earthwiseinsights.com" class="brief-cta-email">njeri@earthwiseinsights.com</a>
+        <div class="brief-cta-note">Earthwise Insights · Nairobi, Kenya · 2026</div>
       </div>
+
     </div>
   </div>
 </div>
@@ -646,7 +706,7 @@ footer{border-top:1px solid var(--b);padding:1.25rem 2.5rem;display:flex;justify
   </div>
   <div class="footer-note">
     Data field-verified · Businesses anonymised · Scores Africa–calibrated<br>
-    © Earthwise Insights 2025
+    © Earthwise Insights 2026
   </div>
 </footer>
 
